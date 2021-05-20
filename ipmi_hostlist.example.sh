@@ -16,14 +16,3 @@ PASSWORD=(
 	["host1"]="ADMIN"
 )
 
-if [ "${1}" = "" ]; then
-    echo Error: one argument required as hostname.
-    exit
-fi
-
-IP=${IPMIHOST[$1]}
-
-if [ "$IP" = "" ]; then
-    echo Error: the host is not in IPMIHOST.
-    exit
-fi
